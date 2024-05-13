@@ -1,0 +1,33 @@
+name: cv_iheb_karim
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  cupertino_icons: ^1.0.2
+  provider: ^6.1.1
+  google_fonts: ^6.2.1
+
+  flutter_localizations:
+    sdk: flutter
+  geolocator: ^11.0.0
+  flutter_map: ^6.1.0
+  google_maps_flutter_web: ^0.5.7
+  shared_preferences: ^2.0.8
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lib/images/
