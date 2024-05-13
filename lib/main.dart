@@ -27,10 +27,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home:  LoginOrRegister(),
-      theme: Provider.of<ThemeProvider>(context).themeData,
+    return FutureBuilder(
+      future: Future.delayed(Duration(seconds: 3)),
+      builder: (context, AsyncSnapshot snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return MaterialApp(home: Scaffold(body: Container()));
+        } else {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: LoginOrRegister(),
+            theme: Provider.of<ThemeProvider>(context).themeData,
+          );
+        }
+      },
     );
   }
 }
